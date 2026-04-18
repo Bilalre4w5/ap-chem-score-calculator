@@ -11,11 +11,11 @@ function clamp(value, min, max) {
 }
 
 function getNumber(id, min, max) {
-    const element = document.getElementById(id);
-    let value = parseFloat(element.value);
+    const input = document.getElementById(id);
+    let value = parseFloat(input.value);
     if (isNaN(value)) value = 0;
     value = clamp(value, min, max);
-    element.value = value;
+    input.value = value;
     return value;
 }
 
@@ -49,45 +49,45 @@ function calculateScore() {
 
     document.getElementById('weightedScore').textContent = weightedTotal;
 
-    const selectedYear = document.getElementById('curveYear').value;
-    const selectedCutoff = cutoffs[selectedYear];
+    const year = document.getElementById('curveYear').value;
+    const cutoff = cutoffs[year];
 
     let apScore = 1;
-    if (weightedTotal >= selectedCutoff[5]) {
+    if (weightedTotal >= cutoff[5]) {
         apScore = 5;
-    } else if (weightedTotal >= selectedCutoff[4]) {
+    } else if (weightedTotal >= cutoff[4]) {
         apScore = 4;
-    } else if (weightedTotal >= selectedCutoff[3]) {
+    } else if (weightedTotal >= cutoff[3]) {
         apScore = 3;
-    } else if (weightedTotal >= selectedCutoff[2]) {
+    } else if (weightedTotal >= cutoff[2]) {
         apScore = 2;
     }
 
     document.getElementById('apScore').textContent = apScore;
 
-    let resultText = '';
+    let message = '';
     if (apScore === 5) {
-        resultText = `Projected score 5 based on the ${selectedYear} curve. This range is usually very competitive and suggests strong command of both sections.`;
+        message = `Projected score 5 based on the ${year} curve. This suggests very strong control across both multiple choice and free response sections.`;
     } else if (apScore === 4) {
-        resultText = `Projected score 4 based on the ${selectedYear} curve. You appear to be in a solid position, and a few more points could push the result higher.`;
+        message = `Projected score 4 based on the ${year} curve. You are in a strong range, and a few more points could move the result even higher.`;
     } else if (apScore === 3) {
-        resultText = `Projected score 3 based on the ${selectedYear} curve. This is often a passing range, though more work on weak areas could improve the final result.`;
+        message = `Projected score 3 based on the ${year} curve. This is often a passing range, with room for improvement through targeted practice.`;
     } else if (apScore === 2) {
-        resultText = `Projected score 2 based on the ${selectedYear} curve. Focus on repeated practice, pacing, and free response accuracy to move upward.`;
+        message = `Projected score 2 based on the ${year} curve. Focus on weak topics, pacing, and free response accuracy for better results.`;
     } else {
-        resultText = `Projected score 1 based on the ${selectedYear} curve. Use this result as a starting point and build from topic review plus timed practice.`;
+        message = `Projected score 1 based on the ${year} curve. Use the estimate as a starting point and build upward through practice and review.`;
     }
 
-    document.getElementById('percentileText').textContent = resultText;
+    document.getElementById('percentileText').textContent = message;
 }
 
-function bindInputs() {
-    const inputIds = ['mcqScore', 'frq1', 'frq2', 'frq3', 'frq4', 'frq5', 'frq6', 'frq7'];
+function bindEvents() {
+    const ids = ['mcqScore', 'frq1', 'frq2', 'frq3', 'frq4', 'frq5', 'frq6', 'frq7'];
 
-    inputIds.forEach(id => {
-        const input = document.getElementById(id);
-        input.addEventListener('input', calculateScore);
-        input.addEventListener('change', calculateScore);
+    ids.forEach(id => {
+        const element = document.getElementById(id);
+        element.addEventListener('input', calculateScore);
+        element.addEventListener('change', calculateScore);
     });
 
     document.getElementById('curveYear').addEventListener('change', calculateScore);
@@ -95,6 +95,6 @@ function bindInputs() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    bindInputs();
+    bindEvents();
     calculateScore();
 });

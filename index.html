@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>AP® Chemistry Score Calculator | Predict Your Exam Score 2025</title>
+    <meta name="description" content="AP® Chemistry score calculator based on official scoring guidelines. Predict your 1-5 score using multiple choice and free response sections. Updated for 2025.">
+    <meta name="google-site-verification" content="NDPItp0-D7cb9O1bA8E752dLXJ5eiRQzrbdCD_tx_CM" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <!-- TOP AD -->
+    <div class="top-ad-container">
+        <script>
+            atOptions = {
+                'key' : 'e74ab4e3c26c700210ac05c602e23a10',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+        </script>
+        <script src="https://www.highperformanceformat.com/e74ab4e3c26c700210ac05c602e23a10/invoke.js"></script>
+    </div>
+
+    <!-- HOSTINGER SECTION -->
+    <div class="hostinger-detail">
+        <div>
+            <h4><i class="fas fa-server"></i> Hostinger – 20% Extra OFF Hosting</h4>
+            <p>Premium $38/yr (3 websites) | Business $48/yr (50 websites) | Cloud $96/yr (100 websites) • Free Domain + SSL</p>
+        </div>
+        <div class="hostinger-links">
+            <a href="https://www.hostinger.com?REFERRALCODE=U0AMUHAMMKF1" target="_blank">20% OFF →</a>
+            <a href="https://www.hostinger.com/cart?product=hosting%3Ahostinger_premium&period=12&referral_type=cart_link&REFERRALCODE=U0AMUHAMMKF1&referral_id=019d94a4-f8a9-716e-bf32-28da5112f185" target="_blank">Premium $38</a>
+            <a href="https://www.hostinger.com/cart?product=hosting%3Ahostinger_business&period=12&referral_type=cart_link&REFERRALCODE=U0AMUHAMMKF1&referral_id=019d94a6-1e8f-718b-9790-77cb61cf76db" target="_blank">Business $48</a>
+            <a href="https://www.hostinger.com/cart?product=hosting%3Acloud_economy&period=12&referral_type=cart_link&REFERRALCODE=U0AMUHAMMKF1&referral_id=019d94a6-5a92-7093-8358-e4b7840acf5c" target="_blank">Cloud $96</a>
+        </div>
+    </div>
+
+    <!-- FIVERR SECTION -->
+    <div class="fiverr-detail">
+        <div>
+            <h4><i class="fab fa-fiverr"></i> Hire Smarter on Fiverr • 10% OFF First Order</h4>
+            <p>Designers, developers, writers, marketers — all in one place. Get quality work done quickly.</p>
+        </div>
+        <div class="fiverr-links">
+            <a href="https://www.fiverr.com/pe/ak623DG" target="_blank">Claim 10% OFF →</a>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>AP® Chemistry Score Calculator</h1>
+        <p>Predict your 1–5 score using official scoring guidelines • Updated for 2025</p>
+    </div>
+
+    <!-- MAIN CALCULATOR -->
+    <div class="calculator-card">
+        <div class="score-grid">
+            <!-- MCQ Section -->
+            <div class="section-card">
+                <div class="section-title"><i class="fas fa-check-circle"></i> Section I: Multiple Choice</div>
+                <div class="input-row">
+                    <label>MCQ Score (0–60):</label>
+                    <input type="number" id="mcqScore" min="0" max="60" value="30" step="1">
+                </div>
+                <div class="input-row">
+                    <label>Raw MCQ Points:</label>
+                    <span id="mcqRaw">30</span> / 60
+                </div>
+            </div>
+
+            <!-- FRQ Section -->
+            <div class="section-card">
+                <div class="section-title"><i class="fas fa-pen-alt"></i> Section II: Free Response</div>
+                <div class="frq-group">
+                    <div class="frq-item"><label>Question 1 (10 pts)</label> <input type="number" id="frq1" min="0" max="10" value="5" step="1" style="width:70px;"></div>
+                    <div class="frq-item"><label>Question 2 (10 pts)</label> <input type="number" id="frq2" min="0" max="10" value="5" step="1" style="width:70px;"></div>
+                    <div class="frq-item"><label>Question 3 (10 pts)</label> <input type="number" id="frq3" min="0" max="10" value="5" step="1" style="width:70px;"></div>
+                    <div class="frq-item"><label>Question 4 (4 pts)</label> <input type="number" id="frq4" min="0" max="4" value="2" step="1" style="width:70px;"></div>
+                    <div class="frq-item"><label>Question 5 (4 pts)</label> <input type="number" id="frq5" min="0" max="4" value="2" step="1" style="width:70px;"></div>
+                    <div class="frq-item"><label>Question 6 (4 pts)</label> <input type="number" id="frq6" min="0" max="4" value="2" step="1" style="width:70px;"></div>
+                    <div class="frq-item"><label>Question 7 (4 pts)</label> <input type="number" id="frq7" min="0" max="4" value="2" step="1" style="width:70px;"></div>
+                </div>
+                <div class="input-row"><label>Total FRQ Raw:</label> <span id="frqRaw">25</span> / 46</div>
+            </div>
+        </div>
+
+        <!-- Curve & Results -->
+        <div class="curve-select">
+            <span><i class="fas fa-chart-line"></i> Score curve year:</span>
+            <select id="curveYear">
+                <option value="2024">2024 (Latest)</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+            </select>
+            <button onclick="calculateScore()">Calculate Score</button>
+        </div>
+
+        <div class="results-card" id="resultsCard">
+            <div class="section-title" style="justify-content: center;">📊 Your Results</div>
+            <div><span id="weightedScore">50</span> / 100 Weighted Score</div>
+            <div class="predicted-score" id="apScore">3</div>
+            <div id="percentileText" class="percentile">Based on your scores, you'd be in approximately the 35th percentile.</div>
+            <a href="#" class="practice-btn" id="practiceLink" target="_blank"><i class="fas fa-graduation-cap"></i> Practice on Albert →</a>
+        </div>
+    </div>
+
+    <!-- INFO SECTION -->
+    <div class="info-grid">
+        <div class="info-card"><h3>What is a good AP® Chemistry score?</h3><p>Scores of 3, 4, or 5 are considered passing. A 3 is 'qualified', 4 'well qualified', 5 'extremely well qualified'. Many top colleges require 4+ for credit.</p></div>
+        <div class="info-card"><h3>Average AP® Chemistry Score</h3><p>2024: 3.31 | 2023: 3.26 | 2022: 2.73 | 2021: 2.66 | Approx average ~2.94. The curve adjusts yearly.</p></div>
+        <div class="info-card"><h3>How to get a 5 on AP® Chem?</h3><p>Only ~13% score a 5. Focus on science practices, conceptual understanding, and deliberate practice. Use Albert's questions to build skills.</p></div>
+        <div class="info-card"><h3>Why use this calculator?</h3><p>Based on official scoring worksheets. Track your progress and know exactly how many MCQ and FRQ points you need for your target score.</p></div>
+    </div>
+
+    <!-- DETAILED EXPLANATION -->
+    <div class="calculator-card" style="margin-top: 1rem;">
+        <h3 style="color:#FFD700;">About the AP® Chemistry Exam</h3>
+        <p>The AP Chemistry exam consists of two sections: multiple-choice (60 questions, 90 minutes) and free-response (7 questions, 105 minutes). The multiple-choice section accounts for 50% of your weighted score, and the free-response section accounts for the other 50%. Our calculator uses the most recent scoring guidelines to predict your final AP score (1-5). The curve varies each year based on national performance. Use the dropdown to select different years for a more accurate prediction.</p>
+        <p style="margin-top: 1rem;">The College Board curves AP exams to maintain consistency across years. Our algorithm uses the official point distributions: each MCQ is worth 1 raw point (max 60). FRQ points: Q1-3 are 10 points each, Q4-7 are 4 points each (total 46 raw FRQ points). Weighted score = (MCQ raw × 0.8333) + (FRQ raw × 1.08696) to normalize to 50/50 weighting. Then the final AP score is determined by cutoffs derived from real exam data.</p>
+        <p>Use this calculator throughout the year to track your progress. Aim for a weighted score above 70 to be confident for a 4 or 5. Good luck!</p>
+    </div>
+
+    <div class="footer">
+        <i class="fas fa-flask"></i> AP® Chemistry Score Calculator | Based on official scoring guidelines | © <span id="currentYear"></span>
+    </div>
+</div>
+
+<!-- BOTTOM AD -->
+<div style="text-align: center; margin-top: 1rem;">
+    <script async="async" data-cfasync="false" src="https://pl29183822.profitablecpmratenetwork.com/e2ffd4c9fdb0a8eb2d67716d9005df55/invoke.js"></script>
+    <div id="container-e2ffd4c9fdb0a8eb2d67716d9005df55"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
